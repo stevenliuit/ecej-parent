@@ -53,7 +53,7 @@ public class DBConfiguration extends AbstractDruidDBConfig {
 		pageHelper.setProperties(props); // 添加插件
 		sqlSessionFactoryBean.setPlugins(new Interceptor[] { pageHelper });
 		PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mapper/*.xml"));
+		sqlSessionFactoryBean.setMapperLocations(resolver.getResources("classpath:mybatis/*.xml"));
 		return sqlSessionFactoryBean.getObject();
 	}
 
